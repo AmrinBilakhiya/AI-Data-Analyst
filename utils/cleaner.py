@@ -19,7 +19,7 @@ def _try_parse_dates(series: pd.Series) -> pd.Series:
                 return parsed
         except Exception:
             pass
-    parsed = pd.to_datetime(series, infer_datetime_format=True, errors="coerce")
+    parsed = pd.to_datetime(series, errors="coerce")
     return parsed
 
 
